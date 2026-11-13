@@ -62,7 +62,7 @@ export function LandingPage() {
         <div className="flex flex-col gap-4">
           <div className="w-full aspect-[4/5] bg-secondary rounded-lg overflow-hidden relative">
             <img 
-              src="public\me.jpeg" 
+              src="public/me.jpeg" 
               alt="Bahati Brenda Kizito" 
               className="w-full h-full object-cover"
             />
