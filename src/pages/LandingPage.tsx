@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react'
-import { ArrowRight, ArrowLeft, Mail, Globe, AtSign, MessageCircle, Clock, Loader2, ArrowUpRight, Lock } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { useNavigate } from '../navigation/RouterContext'
+import { ArrowRight, ArrowLeft, Mail, Globe, AtSign, MessageCircle, Clock, Loader2 } from 'lucide-react'
+//import { Button } from '@/components/ui/button'
+//import { useNavigate } from '../navigation/RouterContext'
 import { PATHS } from '../navigation/paths'
 import { getPosts } from '../lib/hashnode'
 
 export function LandingPage() {
-  const navigate = useNavigate()
   //State for real data
   const [allPosts, setAllPosts] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
+  //const [error, setError] = useState<string | null>(null)
 
   //state for filters and pagination
   const [activeFilter, setActiveFilter] = useState<'All' | 'Architecture' | 'Technology' | 'Development'>('All')
@@ -21,12 +20,12 @@ export function LandingPage() {
   useEffect(() => {
     const fetchPosts = async () => {
       setLoading(true)
-      setError(null)
+      //setError(null)
       try {
         const data = await getPosts()
         setAllPosts(data)
       } catch (err: any) {
-        setError(err.message || 'An error occurred while fetching posts.')
+        //setError(err.message || 'An error occurred while fetching posts.')
       } finally {
         setLoading(false)
       }

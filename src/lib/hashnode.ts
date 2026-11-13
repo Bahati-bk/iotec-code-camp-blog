@@ -1,7 +1,7 @@
 // src/lib/hashnode.ts
 import { XMLParser } from "fast-xml-parser";
 
-const RSS_URL = "https://godfident-data.hashnode.dev/rss.xml";
+//const RSS_URL = "https://godfident-data.hashnode.dev/rss.xml";
 
 // Helper to unwrap CDATA sections in RSS text fields
 function unwrap(value: any): string {
