@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/hashnode-api/:path*",
+      "destination": "https://godfident-data.hashnode.dev/:path*"
+    }
+  ]
+}
