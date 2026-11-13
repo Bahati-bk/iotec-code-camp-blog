@@ -49,8 +49,7 @@ export function LandingPage() {
 
   //This uses the custom router to go to the blog details page
   const handleReadMore = (slug: string) => {
-    navigate(PATHS.BLOG_DETAILS)
-    console.log(`Navigating to blog details for slug: ${slug}`)
+    window.location.href = `${PATHS.BLOG_DETAILS}?slug=${slug}`
   }
 
 
