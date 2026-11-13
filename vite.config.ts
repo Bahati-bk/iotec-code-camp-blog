@@ -11,4 +11,14 @@ export default defineConfig({
             "@": path.resolve(__dirname, "./src"),
         },
     },
+
+    server: {
+        proxy: {
+            '/hashnode-api': {
+                target: 'https://godfident-data.hashnode.dev',
+                changeOrigin: true,
+                rewrite: (path) => path.replace(/^\/hashnode-api/, ''),
+            },
+        },
+    },
 })
